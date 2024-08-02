@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css" />
+    <title>じゃんけん</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌟じゃんけんポン🌟</h1>
+        <h3>？？あなたはどれで勝負する？？</h3>
+    </header>
+
+    <main>
+        <ul>
+            <li id="gu_btn">グー</li>
+            <li id="cho_btn">チョキ</li>
+            <li id="par_btn">パー</li>
+        </ul>
+
+        <p id="echo"></p>
+
+    </main>
+
+    <footer>✨10回中 何回勝てたかな？？✨</footer>
+
+    <script>
+
+        console.log("gu_btn")
+        $("#gu_btn").on("click", function () {
+
+            const r = Math.ceil(Math.random() * 3);
+
+            let view = "";
+
+            if (r == 1) {
+                view = '<img src="gu-aiko.jpg" width="60%">';
+            }
+            if (r == 2) {
+                view = '<img src="chokikati.jpg" width="60%">';
+            }
+            if (r == 3) {
+                view = '<img src="pa-make.jpg" width="60%">';
+            }
+
+            $("#echo").html(view);
+
+        });
+
+        console.log("cho_btn")
+        $("#cho_btn").on("click", function () {
+
+            const r = Math.ceil(Math.random() * 3);
+
+            let view = "";
+
+            if (r == 1) {
+                view = '<img src="gu-make.jpg" width="60%">';
+            }
+            if (r == 2) {
+                view = '<img src="chokiaiko.jpg" width="60%">';
+            }
+            if (r == 3) {
+                view = '<img src="pa-kati.jpg" width="60%">';
+            }
+
+            $("#echo").html(view);
+
+        });
+
+        console.log("par_btn")
+        $("#par_btn").on("click", function () {
+
+            const r = Math.ceil(Math.random() * 3);
+
+            let view = "";
+
+            if (r == 1) {
+                view = '<img src="gu-kati.jpg" width="60%">';
+            }
+            if (r == 2) {
+                view = '<img src="chokimake.jpg" width="60%">';
+            }
+            if (r == 3) {
+                view = '<img src="pa-aiko.jpg" width="60%">';
+            }
+
+            $("#echo").html(view);
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
